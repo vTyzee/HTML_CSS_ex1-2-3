@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>audio element</title>
+    <script src="Modernizr-2.0.6.js"></script>
+</head>
+<body>
+    <!-- autoplay — сообщает браузеру о том, что необходимо начать воспроизведение аудио, как только будет загружена страница -->
+    <!-- loop — повторное запуск аудио после окончания -->
+    <!-- controls — добавляет строку, отображающую элементы управления, и позволяет пользователю воспроизводить данные тип медиафайла -->
+    <audio id="audio" controls autoplay src="Vivaldi.ogg">
+        <a href="http://html5accessibility.com/">Браузер не поддерживает воспроизведение звуковых медиафайлов</a>
+    </audio>
+
+    <script>
+        if (!Modernizr.audio) {
+            alert("Браузер не поддерживает воспроизведение звуковых файлов");
+        } else {
+            var audio = document.getElementById("audio");
+            var res = audio.canPlayType('audio/ogg; codecs="vorbis"');
+            if (res) alert("Can play ogg/vorbis");
+            else alert("No support for ogg/vorbis");
+        }
+    </script>
+</body>
+</html>

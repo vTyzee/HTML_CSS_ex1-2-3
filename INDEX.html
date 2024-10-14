@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивный Кликер</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .clicker {
+            text-align: center;
+        }
+
+        .counter {
+            font-size: 50px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            transition: transform 0.1s ease;
+        }
+
+        .click-button {
+            background-color: #3498db;
+            color: white;
+            padding: 20px 40px;
+            font-size: 24px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .click-button:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+        }
+
+        .bonus {
+            position: absolute;
+            font-size: 24px;
+            color: #e74c3c;
+            animation: rise 1s forwards;
+        }
+
+        @keyframes rise {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="clicker">
+        <div class="counter" id="counter">0</div>
+        <button class="click-button" onclick="increment()">Кликни меня!</button>
+    </div>
+
+    <script>
+        let count = 0;
+
+        function increment() {
+            count++;
+            const counterElement = document.getElementById('counter');
+            counterElement.textContent = count;
+
+            // Добавление анимации увеличения счётчика
+            counterElement.style.transform = 'scale(1.2)';
+            setTimeout(() => {
+                counterElement.style.transform = 'scale(1)';
+            }, 100);
+
+            // Генерация бонусного числа
+            const bonus = document.createElement('div');
+            bonus.textContent = `+${Math.floor(Math.random() * 10) + 1}`;
+            bonus.classList.add('bonus');
+            document.body.appendChild(bonus);
+
+            // Случайное размещение бонусного числа
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight;
+            bonus.style.left = `${x}px`;
+            bonus.style.top = `${y}px`;
+
+            // Удаление бонусного числа после анимации
+            setTimeout(() => {
+                bonus.remove();
+            }, 1000);
+        }
+    </script>
+
+</body>
+</html>
