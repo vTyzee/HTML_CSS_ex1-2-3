@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>empty</title>
+    <style>
+        /* :empty - псевдокласс, который представляет пустые элементы */
+        span:empty {
+            background: red;
+            padding: 3px;
+            margin: 7px;
+        }
+
+        span:empty::before {
+            content: "Пустой элемент";
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <span></span>
+    <p>
+        Lorem ipsum dolor <span></span> sit amet, consectetur adipiscing elit...
+    </p>
+</body>
+</html>

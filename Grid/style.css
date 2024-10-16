@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 столбца */
+    grid-gap: 20px; /* расстояние между элементами */
+}
+
+.news-item {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.news-item__img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.news-item__descr {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
