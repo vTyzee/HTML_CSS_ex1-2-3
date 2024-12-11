@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Язык по умолчанию - английский -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Bean & Leaf Coffeehouse Landing Page" />
+    <meta name="author" content="Awesome student" />
+    <title>Bean & Leaf Coffeehouse</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/modern-normalize.min.css"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <!-- Переключатель языка -->
+            <div class="header__lang-switch">
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="fr">FR</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="promo">
+            <div class="container">
+                <h1 class="promo__title lang-en">Bean & Leaf Coffeehouse</h1>
+                <h1 class="promo__title lang-fr" style="display:none;">Bean & Leaf Café</h1>
+
+                <h2 class="promo__subtitle lang-en">Looking for the perfect cup of coffee?</h2>
+                <h2 class="promo__subtitle lang-fr" style="display:none;">À la recherche de la tasse de café parfaite ?</h2>
+
+                <a href="#menu" class="btn lang-en">Our Menu</a>
+                <a href="#menu" class="btn lang-fr" style="display:none;">Notre Menu</a>
+
+                <div class="promo__address lang-en">
+                    Location:
+                    <address>123 Aroma Street, Paris 75000</address>
+                    <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+                </div>
+                <div class="promo__address lang-fr" style="display:none;">
+                    Emplacement :
+                    <address>123 Rue de l'Arôme, Paris 75000</address>
+                    <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+                </div>
+            </div>
+            <ul class="keywords">
+                <li>Coffee</li>
+                <li>Espresso</li>
+                <li>Latte</li>
+                <li>Cappuccino</li>
+                <li>Bakery</li>
+                <li>Organic</li>
+                <li>Handpicked</li>
+                <li>Fair-Trade</li>
+                <li>Artisanal</li>
+                <li>Barista</li>
+                <li>Roastery</li>
+                <li>Fresh</li>
+                <li>Aroma</li>
+            </ul>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <h2 class="about__title lang-en">What you can expect from us:</h2>
+                <h2 class="about__title lang-fr" style="display:none;">Ce que vous pouvez attendre de nous :</h2>
+                <p class="about__text lang-en">
+                    We specialize in serving expertly crafted coffee, fresh pastries, and a warm, welcoming atmosphere. With a passion for quality beans,
+                    we aim to maximize the aroma and flavor in <span>every cup</span>.
+                </p>
+                <p class="about__text lang-fr" style="display:none;">
+                    Nous nous spécialisons dans la préparation de cafés élaborés par des experts, de pâtisseries fraîches, et une ambiance chaleureuse. Avec une passion pour les grains de qualité,
+                    nous visons à maximiser l'arôme et la saveur dans <span>chaque tasse</span>.
+                </p>
+                <div class="services">
+                    <div class="services__items">
+                        <div class="services__item-subtitle lang-en">All services</div>
+                        <div class="services__item-subtitle lang-fr" style="display:none;">Tous les services</div>
+                        <ul>
+                            <li class="lang-en">Coffee Menu: Espresso, Latte, Cappuccino, Pour-over</li>
+                            <li class="lang-fr" style="display:none;">Menu Café : Espresso, Latte, Cappuccino, Filtré</li>
+                            <li class="lang-en">Bakery & Pastry: Croissants, Muffins, Artisan Bread</li>
+                            <li class="lang-fr" style="display:none;">Boulangerie & Pâtisserie : Croissants, Muffins, Pain Artisanal</li>
+                            <li class="lang-en">Bean Selection & Roasting: Single-origin, Blends, Seasonal</li>
+                            <li class="lang-fr" style="display:none;">Sélection & Torréfaction de Grains : Origine unique, Mélanges, Saisonniers</li>
+                        </ul>
+                    </div>
+                    <div class="services__text">
+                        <p class="lang-en">
+                            With years of experience in sourcing premium beans, perfecting brewing techniques, and creating a friendly café environment,
+                            we bring that expertise for you to enjoy unforgettable coffee moments. <br />Now, sit back, relax, and savor the taste.
+                        </p>
+                        <p class="lang-fr" style="display:none;">
+                            Avec des années d'expérience dans la sélection de grains premium, la maîtrise des techniques d'extraction, et la création d'une ambiance conviviale,
+                            nous mettons cette expertise à votre disposition pour savourer des moments café inoubliables. <br />Asseyez-vous, détendez-vous et dégustez.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="works" id="menu">
+            <div class="container">
+                <h2 class="title">
+                    <span class="lang-en">Our Menu</span>
+                    <span class="lang-fr" style="display:none;">Notre Menu</span>
+                </h2>
+                <div class="works__grid fade-in-on-scroll">
+                    <img src="img/products/espresso.jpg" alt="Espresso" class="hover-scale" />
+                    <img src="img/products/latte.jpg" alt="Latte" class="hover-scale" />
+                    <img src="img/products/cappuccino.jpg" alt="Cappuccino" class="hover-scale" />
+                    <img src="img/products/pastry.jpg" alt="Pastry" class="hover-scale" />
+                    <img src="img/products/beans.jpg" alt="Coffee Beans" class="hover-scale" />
+                </div>
+            </div>
+        </section>
+
+        <section class="inspiration">
+            <div class="container">
+                <h2 class="title">
+                    <span class="lang-en">Our Inspiration</span>
+                    <span class="lang-fr" style="display:none;">Notre Inspiration</span>
+                </h2>
+                <div class="inspiration__grid fade-in-on-scroll">
+                    <img src="img/inspiration/farmers.jpg" alt="Farmers" class="hover-scale" />
+                    <img src="img/inspiration/plantations.jpg" alt="Plantations" class="hover-scale" />
+                    <img src="img/inspiration/barista.jpg" alt="Barista" class="hover-scale" />
+                    <img id="tenement" src="img/inspiration/latteart.jpg" alt="Latte Art" class="hover-scale" />
+                    <img src="img/inspiration/roastery.jpg" alt="Roastery" class="hover-scale" />
+                    <img id="sky" src="img/inspiration/bakery.jpg" alt="Bakery" class="hover-scale" />
+                    <img src="img/inspiration/cacao.jpg" alt="Cacao Beans" class="hover-scale" />
+                    <img src="img/inspiration/brewstation.jpg" alt="Brew Station" class="hover-scale" />
+                </div>
+            </div>
+        </section>
+
+        <section class="customers">
+            <div class="container">
+                <h2 class="title">
+                    <span class="lang-en">Our Partners</span>
+                    <span class="lang-fr" style="display:none;">Nos Partenaires</span>
+                </h2>
+                <div class="customers__wrapper fade-in-on-scroll">
+                    <img src="logo\local-roaster..jpg" alt="Local Roaster" class="hover-scale" />
+                    <img src="logo\logo-iec-winter-wolf.jpg" alt="Coffee Farm" class="hover-scale" />
+                    <img src="logo\pastry-house.jpg" alt="Pastry House" class="hover-scale" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials (Отзывы) -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="title">
+                    <span class="lang-en">Testimonials</span>
+                    <span class="lang-fr" style="display:none;">Témoignages</span>
+                </h2>
+                <div class="testimonials__wrapper fade-in-on-scroll">
+                    <figure class="testimonial hover-scale">
+                        <blockquote class="lang-en">
+                            "Bean & Leaf serves the best espresso in town! Smooth, rich, and unforgettable."
+                        </blockquote>
+                        <blockquote class="lang-fr" style="display:none;">
+                            "Bean & Leaf sert le meilleur espresso de la ville ! Doux, riche, et inoubliable."
+                        </blockquote>
+                        <figcaption>- John Doe, Coffee Enthusiast</figcaption>
+                    </figure>
+                    <figure class="testimonial hover-scale">
+                        <blockquote class="lang-en">
+                            "Their pastries are always fresh and the atmosphere is so cozy. I feel at home."
+                        </blockquote>
+                        <blockquote class="lang-fr" style="display:none;">
+                            "Leurs pâtisseries sont toujours fraîches et l'ambiance est si chaleureuse. Je me sens comme chez moi."
+                        </blockquote>
+                        <figcaption>- Jane Smith, Food Blogger</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events (События) -->
+        <section class="events">
+            <div class="container">
+                <h2 class="title">
+                    <span class="lang-en">Upcoming Events</span>
+                    <span class="lang-fr" style="display:none;">Événements à venir</span>
+                </h2>
+                <div class="events__list fade-in-on-scroll">
+                    <article class="event-card hover-scale">
+                        <h3 class="lang-en">Coffee Tasting - June 15</h3>
+                        <h3 class="lang-fr" style="display:none;">Dégustation de Café - 15 Juin</h3>
+                        <p class="lang-en">Join us for an exploration of single-origin beans and learn about their unique flavors.</p>
+                        <p class="lang-fr" style="display:none;">Rejoignez-nous pour une exploration de grains d'origine unique et découvrez leurs saveurs uniques.</p>
+                    </article>
+                    <article class="event-card hover-scale">
+                        <h3 class="lang-en">Barista Workshop - July 10</h3>
+                        <h3 class="lang-fr" style="display:none;">Atelier Barista - 10 Juillet</h3>
+                        <p class="lang-en">Learn how to brew the perfect cup at home and master latte art techniques.</p>
+                        <p class="lang-fr" style="display:none;">Apprenez à préparer la tasse parfaite chez vous et maîtrisez l'art du latte.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <ul class="footer__social">
+            <li>
+                <a href="#" class="footer__link">
+                    <img src="img/icons/facebook.svg" alt="facebook link" />
+                </a>
+            </li>
+            <li>
+                <a href="#" class="footer__link">
+                    <img src="img/icons/tg.svg" alt="tg link" />
+                </a>
+            </li>
+            <li>
+                <a href="#" class="footer__link">
+                    <img src="img/icons/whatsapp.svg" alt="whatsapp link" />
+                </a>
+            </li>
+        </ul>
+        <address class="footer__addr lang-en">
+            123 Aroma Street, Paris 75000
+        </address>
+        <address class="footer__addr lang-fr" style="display:none;">
+            123 Rue de l'Arôme, Paris 75000
+        </address>
+        <a class="footer__tel" href="tel:+33123456789">+33 1 23 45 67 89</a>
+    </footer>
+</body>
+</html>
