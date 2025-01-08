@@ -1,0 +1,393 @@
+/* Сброс отступов и общие настройки */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  color: #333;
+}
+
+/************************************************
+  ШАПКА
+************************************************/
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 1em 2em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 1.6rem;
+  color: #0f6582;
+  margin-bottom: 0.2em;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.login-btn {
+  background: #0f6582;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #09485a;
+}
+
+/************************************************
+  ГЕРОЙ
+************************************************/
+.hero {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1em;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.video-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.video-button:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+/************************************************
+  ПРЕИМУЩЕСТВА (Benefits)
+************************************************/
+.benefits-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  margin: 1em 0;
+  padding: 1em;
+  background: #fff;
+}
+
+.benefit {
+  flex: 1;
+  margin: 0 0.5em;
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 1em;
+}
+
+.benefit h3 {
+  margin-bottom: 0.5em;
+  color: #0f6582;
+}
+
+/************************************************
+  ОТЗЫВЫ (Testimonials)
+************************************************/
+.testimonials-section {
+  background: #fff;
+  padding: 2em 1em;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  margin-bottom: 1em;
+  color: #0f6582;
+}
+
+.testimonials-slider {
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  height: 140px; /* фиксированная высота */
+  overflow: hidden;
+}
+
+.testimonial {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.6s;
+}
+
+.testimonial.active {
+  opacity: 1;
+  position: relative;
+}
+
+.testimonial img {
+  border-radius: 50%;
+  margin-bottom: 0.5em;
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+
+/************************************************
+  ОСОБЕННОСТИ (Features)
+************************************************/
+.features-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  margin: 1em 0;
+  padding: 1em;
+  background: #fff;
+}
+
+.feature {
+  flex: 1;
+  margin: 0 0.5em;
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 1em;
+}
+
+.feature h3 {
+  margin-bottom: 0.5em;
+  color: #0f6582;
+}
+
+/************************************************
+  ФОРМА РЕГИСТРАЦИИ (Sign Up)
+************************************************/
+.signup-section {
+  background: #fff;
+  text-align: center;
+  padding: 2em 1em;
+}
+
+.signup-section h2 {
+  margin-bottom: 1em;
+  color: #0f6582;
+}
+
+.signup-form {
+  display: inline-flex;
+  gap: 0.5em;
+  max-width: 500px;
+  width: 100%;
+  justify-content: center;
+}
+
+.signup-form input[type="email"] {
+  flex: 1;
+  min-width: 180px;
+  padding: 0.6em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.signup-form button {
+  background: #e5530d;
+  color: #fff;
+  border: none;
+  padding: 0.6em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-form button:hover {
+  background: #c74600;
+}
+
+/************************************************
+  ПОДВАЛ (Footer)
+************************************************/
+.main-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0f6582;
+  color: #fff;
+  padding: 1.5em 1em;
+}
+
+.footer-menu {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.footer-menu li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer-menu li a:hover {
+  color: #ffdd57; /* небольшой эффект при наведении */
+}
+
+.social-media {
+  margin-bottom: 1em;
+}
+
+.social-media a {
+  margin: 0 0.5em;
+  display: inline-block;
+}
+
+.social-media img {
+  vertical-align: middle;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/************************************************
+  АДАПТИВНОСТЬ (Media Queries)
+************************************************/
+/* 
+   Стандартное правило для планшетов и устройств шириной до 768px:
+*/
+@media (max-width: 768px) {
+  /* Шапка: складываемся в колонку */
+  .main-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+  }
+
+  .benefits-section,
+  .features-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefit,
+  .feature {
+    margin-bottom: 1em;
+    max-width: 300px;
+  }
+
+  .hero-img {
+    max-height: 220px;
+  }
+}
+
+
+/* 
+   Дополнительное правило для ещё более маленьких экранов (например, до 480px):
+   Здесь мы можем уменьшить размеры шрифтов и ещё сильнее сжать некоторые элементы.
+*/
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; /* Немного уменьшим общий размер шрифта */
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .login-btn {
+    padding: 0.4em 0.8em;
+  }
+
+  .hero-img {
+    max-height: 180px;
+  }
+
+  .benefits-section,
+  .features-section {
+    padding: 0.5em;
+  }
+
+  .benefit,
+  .feature {
+    margin: 0.5em 0;
+    padding: 0.8em;
+  }
+
+  .benefit h3,
+  .feature h3 {
+    font-size: 1rem;
+  }
+
+  .testimonials-section {
+    padding: 1em 0.5em;
+  }
+
+  .testimonials-slider {
+    height: auto; /* убираем фиксированную высоту, чтобы отзыв мог растягиваться */
+  }
+
+  .testimonial img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+  }
+
+  .signup-section {
+    padding: 1em 0.5em;
+  }
+
+  .signup-form {
+    flex-direction: column;
+    gap: 0.5em;
+  }
+
+  .signup-form input[type="email"] {
+    min-width: auto; /* чтобы точно влезало на маленьком экране */
+  }
+
+  .main-footer {
+    padding: 1em 0.5em;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    gap: 0.5em;
+    margin-bottom: 1em;
+  }
+}
+.benefit img {
+  display: block;
+  margin: 0 auto;
+  /* При необходимости, чтобы не «разъезжалось»:
+  max-width: 100%;
+  height: auto;
+  */
+}

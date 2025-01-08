@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adventuro - Приключенческие путешествия</title>
+  <!-- Подключаем стили -->
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header class="main-header">
+    <div class="header-left">
+      <h1 class="logo">Adventuro</h1>
+      <p class="tagline">Открой мир приключений</p>
+    </div>
+    <button class="login-btn">Войти</button>
+  </header>
+
+  <!-- ШАПКА -->
+<!-- ГЕРОЙ (большая картинка без кнопки) -->
+<section class="hero">
+    <img 
+      src="images/hero_image.jpg" 
+      alt="Приключенческое путешествие" 
+      class="hero-img"
+    />
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop>
+          <source src="video/videoNature.mp4" type="video/mp4">
+          Ваш браузер не поддерживает видео.
+        </video>
+        <button class="video-button">&#9658;</button>
+      </section>
+      
+
+  <!-- ПРЕИМУЩЕСТВА (3 блока) -->
+  <section class="benefits-section">
+    <div class="benefit">
+      <h3>Уникальные маршруты</h3>
+      <p>Мы предлагаем необычные направления и авторские туры.</p>
+      <img src="images/benefit1.jpg" alt="Уникальные маршруты">
+    </div>
+    <div class="benefit">
+      <h3>Бронирование за минуту</h3>
+      <p>Удобная онлайн-система для быстрого и безопасного оформления поездки.</p>
+      <img src="images/benefit2.jpg" alt="Бронирование за минуту">
+    </div>
+    <div class="benefit">
+      <h3>Локальные гиды</h3>
+      <p>Опытные проводники покажут самые красивые места и помогут окунуться в культуру.</p>
+      <img src="images/benefit3.jpg" alt="Локальные гиды">
+    </div>
+  </section>
+
+  <!-- ОТЗЫВЫ (простая карусель на JS) -->
+  <section class="testimonials-section">
+    <h2>Отзывы путешественников</h2>
+    <div class="testimonials-slider">
+      <div class="testimonial active">
+        <img 
+          src="images/testimonial1.jpg" 
+          alt="User 1"
+        />
+        <p>«Это было лучшее приключение в моей жизни! Спасибо Adventuro!»</p>
+        <span>- Алексей</span>
+      </div>
+      <div class="testimonial">
+        <img 
+          src="images/testimonial2.jpg" 
+          alt="User 2"
+        />
+        <p>«Наш гид был великолепен. Маршрут превзошёл все ожидания!»</p>
+        <span>- Ольга</span>
+      </div>
+      <div class="testimonial">
+        <img 
+          src="images/testimonial3.jpg" 
+          alt="User 3"
+        />
+        <p>«Бронировала тур в последний момент — всё прошло идеально.»</p>
+        <span>- Мария</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ОСОБЕННОСТИ (3 блока) -->
+  <section class="features-section">
+    <div class="feature">
+      <h3>24/7 Поддержка</h3>
+      <p>Мы всегда на связи, чтобы помочь в любой точке мира.</p>
+    </div>
+    <div class="feature">
+      <h3>Гибкие даты</h3>
+      <p>Легко перенести поездку или изменить план под ваш график.</p>
+    </div>
+    <div class="feature">
+      <h3>Безопасная оплата</h3>
+      <p>Надёжная система транзакций для вашей уверенности и спокойствия.</p>
+    </div>
+  </section>
+
+  <!-- ФОРМА РЕГИСТРАЦИИ (Призываем подписаться) -->
+  <section class="signup-section">
+    <h2>Присоединиться к приключениям</h2>
+    <form class="signup-form">
+      <input type="email" placeholder="Введите ваш E-mail" required />
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
+
+  <!-- ПОДВАЛ -->
+  <footer class="main-footer">
+    <ul class="footer-menu">
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Контакты</a></li>
+      <li><a href="#">Политика конфиденциальности</a></li>
+    </ul>
+    <div class="social-media">
+      <a href="#" aria-label="Facebook">
+        <img src="images/testimonial1.jpg" alt="FB"/>
+      </a>
+      <a href="#" aria-label="Instagram">
+        <img src="images/testimonial2.jpg" alt="IG"/>
+      </a>
+      <a href="#" aria-label="Twitter">
+        <img src="images/testimonial3.jpg" alt="TW"/>
+      </a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Adventuro. Все права защищены.</p>
+  </footer>
+
+  <!-- Подключаем скрипт -->
+  <script src="script.js"></script>
+</body>
+</html>
