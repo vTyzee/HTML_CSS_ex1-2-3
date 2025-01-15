@@ -1,0 +1,729 @@
+/* ================================
+   СБРОС
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ================================
+     БАЗОВЫЙ ФОН/СТИЛЬ
+  ================================ */
+  body {
+    background: #044E54; /* Тёмный фон (замена #111) */
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+    color: #EBF7F8; /* замена #ccc */
+  }
+  
+  /* ================================
+     HEADER (Шапка)
+  ================================ */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #046F7E; /* замена #222 */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+  }
+  .header__logo {
+    display: flex;
+    align-items: center;
+  }
+  .header__logo img {
+    margin-right: 10px;
+    width: 70px;
+    height: 70px;
+  }
+  .header__tagline {
+    color: #FAFAFA; /* замена #fff */
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-shadow: 0 0 5px #000;
+  }
+  .header__login-btn {
+    background-color: #FF9800; /* замена #f39c12 */
+    color: #FAFAFA; /* замена #fff */
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  .header__login-btn:hover {
+    background-color: #CC7A00; /* замена #d9890f */
+  }
+  
+  /* ================================
+     HERO (большое изображение)
+  ================================ */
+  .hero {
+    position: relative;
+    width: 100%;
+    max-height: 700px; /* Ограничиваем высоту */
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 25px 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), #044E54); /* замена #111 */
+  }
+  .hero__image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    opacity: 0.8; /* затемнение */
+    transition: opacity 0.3s;
+  }
+  .hero__image:hover {
+    opacity: 1;
+  }
+  
+  /* ================================
+     VIDEO (TRAILER)
+  ================================ */
+  .video {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .video__container {
+    position: relative;
+    width: 100%; /* Видео занимает всю ширину родителя */
+    aspect-ratio: 16 / 9; /* Пропорции 16:9 для видео */
+    overflow: hidden;
+    border-radius: 8px; /* Скругленные углы для контейнера */
+  }
+  
+  .video__container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Видео подстраивается под ширину контейнера */
+    object-fit: cover; /* Обеспечивает масштабирование видео, сохраняя пропорции */
+    border: none;
+    height: 100%;
+  }
+  
+  /* ================================
+     BENEFITS (Преимущества)
+  ================================ */
+  .benefits {
+    display: grid;
+    justify-content: center;
+    padding: 40px 20px; /* Увеличены отступы для больших экранов */
+    gap: 20px;
+  }
+  
+  .benefits h2 {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #FF9800; /* замена #f39c12 */
+    text-transform: uppercase;
+  }
+  
+  .benefits p {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  .benefits input[type="radio"] {
+    display: none;
+  }
+  
+  .benefits__slider-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: #046F7E; /* замена #222 */
+  }
+  
+  .benefits__slider {
+    display: flex;
+    width: auto;
+    transition: transform 0.4s ease;
+    gap: 25px;
+    background-color: #044E54; /* замена #111 */
+  }
+  
+  .benefits__item {
+    flex: 1 1 250px;
+    background-color: #046F7E; /* замена #222 */
+    color: #EBF7F8; /* замена #ccc */
+    border-radius: 8px;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .benefits__item h3 {
+    color: #FF9800; /* замена #f39c12 */
+    margin-bottom: 8px;
+  }
+  
+  .benefits__item p {
+    font-size: 1rem;
+    line-height: 1.42312;
+  }
+  
+  .benefits__button {
+    display: none;
+  }
+  
+  /* ================================
+     TESTIMONIALS (Отзывы)
+  ================================ */
+  .testimonials {
+    padding: 20px;
+    text-align: center;
+    max-width: 2000px;
+    margin: 0 auto;
+  }
+  
+  .testimonials h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #FF9800; /* замена #f39c12 */
+    text-transform: uppercase;
+  }
+  
+  .testimonials input[type="radio"] {
+    display: none;
+  }
+  
+  .testimonials__slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid #03424C; /* замена #333 */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+  
+  .testimonials__slider {
+    display: flex;
+    width: 300%;
+    transition: transform 0.4s ease;
+  }
+  
+  .testimonials__item {
+    flex: 0 0 100%;
+    background-color: #046F7E; /* замена #222 */
+    color: #EBF7F8; /* замена #ccc */
+    border-radius: 8px;
+    padding: 30px 30px; /* Уменьшаем паддинг для лучшего размещения */
+    box-sizing: border-box;
+    text-align: left; /* Изменяем выравнивание текста */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Добавляем отступ между аватаркой и текстом */
+  }
+  
+  .testimonials__item img {
+    border-radius: 50%;
+    width: 100px; /* Уменьшаем размер аватарки для лучшего отображения */
+    height: 100px;
+    border: 2px solid #026773; /* замена #555 */
+    margin-left: 50px;
+    flex-shrink: 0; /* Предотвращает сжатие аватарки */
+  }
+  
+  .testimonials__item p {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin-right: 25px;
+  }
+  
+  .testimonials__item span {
+    font-style: italic;
+    font-size: 0.9rem;
+    padding-right: 50px;
+  }
+  
+  .testimonials__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: #FF9800; /* замена #f39c12 */
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    border-radius: 50%;
+    border: none;
+    display: none;
+    z-index: 10;
+    color: #FAFAFA; /* замена #fff */
+    transition: background-color 0.3s;
+  }
+  
+  .testimonials__button:hover {
+    background-color: #CC7A00; /* замена #f39c12 (hover) */
+    /* Немного затемненный цвет при наведении */
+  }
+  
+  .testimonials__button--prev {
+    left: 10px;
+  }
+  
+  .testimonials__button--next {
+    right: 10px;
+  }
+  
+  #t-1:checked ~ .testimonials__slider-container .testimonials__slider {
+    transform: translateX(0%);
+  }
+  
+  #t-1:checked ~ .testimonials__slider-container .btn-1 {
+    display: block;
+  }
+  
+  #t-2:checked ~ .testimonials__slider-container .testimonials__slider {
+    transform: translateX(-100%);
+  }
+  
+  #t-2:checked ~ .testimonials__slider-container .btn-2 {
+    display: block;
+  }
+  
+  #t-3:checked ~ .testimonials__slider-container .testimonials__slider {
+    transform: translateX(-200%);
+  }
+  
+  #t-3:checked ~ .testimonials__slider-container .btn-3 {
+    display: block;
+  }
+  
+  /* ================================
+     FEATURES (Особенности)
+  ================================ */
+  .features {
+    padding: 40px;
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .features h2 {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    color: #FF9800; /* замена #f39c12 */
+    text-transform: uppercase;
+  }
+  .features__items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: space-evenly;
+  }
+  .features__item {
+    flex: 1 1 calc(33.33% - 40px);
+    max-width: calc(33.33% - 40px);
+    padding: 20px;
+    background-color: #046F7E; /* замена #222 */
+    color: #FAFAFA; /* замена #fff */
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 20px;
+  }
+  .features__item h3 {
+    color: #FF9800; /* замена #f39c12 */
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+  }
+  .features__item p {
+    color: #EBF7F8; /* замена #ccc */
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  
+  /* ================================
+     SIGNUP (Форма подписки)
+  ================================ */
+  .signup {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #014044; /* замена #131313 */
+    text-align: center;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    color: #FF9800; /* замена #f39c12 */
+  }
+  
+  .signup__form {
+    display: flex;
+    flex-direction: row; /* Поля располагаются в столбик */
+    width: 100%; /* Ширина формы */
+    max-width: none; /* Ограничиваем максимальную ширину */
+    gap: 20px; /* Отступы между элементами */
+    padding: 20px;
+  }
+  
+  .signup__form input,
+  .signup__form button {
+    width: 100%; /* Элементы занимают всю ширину контейнера */
+    padding: 15px; /* Внутренние отступы */
+    font-size: 1.2rem; /* Увеличиваем размер текста */
+    border-radius: 8px; /* Скруглённые углы */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Лёгкая тень для визуального выделения */
+  }
+  
+  .signup__form input {
+    border: 2px solid #03424C; /* замена #333 */
+    outline: none;
+    background-color: #025159; /* замена #1c1c1c */
+    color: #FAFAFA; /* замена #fff */
+    transition: border-color 0.3s, background-color 0.3s;
+  }
+  
+  .signup__form input:focus {
+    border-color: #FF9800; /* замена #f39c12 */
+    background-color: #046F7E; /* замена #222 */
+  }
+  
+  .signup__form button {
+    background-color: #2EC4B6; /* замена #27ae60 */
+    color: #FAFAFA; /* замена #fff */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .signup__form button:hover {
+    background-color: #28b3a4; /* замена #229e55 */
+    transform: scale(1.02); /* Лёгкое увеличение при наведении */
+  }
+  
+  .signup__form button:active {
+    transform: scale(0.98); /* Лёгкое уменьшение при клике */
+  }
+  
+  /* ================================
+     FOOTER (Подвал)
+  ================================ */
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #046F7E; /* замена #222 */
+    color: #EBF7F8; /* замена #ccc */
+    padding: 10px 20px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.7);
+  }
+  .footer__menu,
+  .footer__social {
+    display: flex;
+    gap: 15px;
+  }
+  .footer__menu a,
+  .footer__social a {
+    color: #EBF7F8; /* замена #ccc */
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer__menu a:hover,
+  .footer__social a:hover {
+    color: #FF9800; /* замена #f39c12 */
+  }
+  /* Иконки соцсетей */
+  .footer__social a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+  }
+  .footer__social a img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* ==============================================
+     АДАПТИВНОСТЬ (media queries)
+  ============================================== */
+  
+  /* max-width: 768px */
+  @media (max-width: 768px) {
+    /* Шапка в столбик */
+    .features {
+      display: grid; /* Используем CSS Grid */
+      grid-template-columns: 1fr; /* Все элементы в одну колонку */
+      grid-auto-rows: min-content; /* Автоматическая высота элементов */
+      gap: 20px; /* Отступы между элементами */
+      padding: 20px; /* Внутренние отступы */
+      max-width: 1050px; /* Ограничиваем ширину столбца */
+      margin: 0 auto; /* Центрируем столбец */
+      box-sizing: border-box; /* Учитываем отступы */
+    }
+  
+    /* Отдельный отзыв */
+    .features__item {
+      color: #FAFAFA; /* замена #fff */
+      padding: 15px; /* Внутренние отступы */
+      border-radius: 8px; /* Скругленные углы */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для блоков */
+      text-align: left; /* Выравнивание текста по левому краю */
+    }
+  
+    /* Заголовок отзыва */
+    .features__item h3 {
+      font-size: 1.1rem; /* Уменьшаем размер заголовка */
+      margin-bottom: 10px; /* Отступ между заголовком и текстом */
+      color: #FFD166; /* замена #ffa500 */
+      white-space: normal; /* Разрешаем перенос текста */
+      word-wrap: break-word; /* Перенос длинных слов */
+      text-align: left; /* Выравниваем текст по левому краю */
+    }
+  
+    /* Текст отзыва */
+    .features__item p {
+      font-size: 1rem; /* Размер текста */
+      line-height: 1.5; /* Межстрочное расстояние */
+      margin: 0; /* Убираем лишние отступы */
+      white-space: normal; /* Разрешаем перенос текста */
+      word-wrap: break-word; /* Перенос длинных слов */
+      text-align: left; /* Выравниваем текст по левому краю */
+    }
+  
+  
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .header__logo img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 5px;
+    }
+    .header__tagline {
+      font-size: 1.1rem;
+    }
+    .header__login-btn {
+      margin-top: 5px;
+      align-self: flex-start;
+    }
+  
+    /* Hero */
+    .hero {
+      max-height: 400px;
+    }
+  
+    /* Видео (адаптив) */
+    .video {
+      padding: 10px;
+    }
+    .video__container video {
+      max-width: 100%;
+    }
+  
+    /* Преимущества -> мобильный слайдер */
+    .benefits__slider-container {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #03424C; /* замена #333 */
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+      background-color: #046F7E; /* замена #222 */
+    }
+    
+    .benefits__slider {
+      display: flex;
+      width: 110%;         
+      transition: transform 0.4s ease;
+    }
+  
+    .benefits__item {
+        flex: 0 0 95.5%;
+      }
+    
+    .benefits__button {
+      display: none; /* покажем при checked */
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #FF9800; /* замена #f39c12 */
+      font-size: 1.5rem;
+      padding: 8px 12px;
+      border-radius: 50%;
+      border: none;
+      color: #FAFAFA; /* замена #fff */
+      cursor: pointer;
+      transition: background-color 0.3s;
+      z-index: 10;
+    }
+  
+    .benefits__button:hover {
+      background-color: #CC7A00; /* замена #f39c12 (hover) */
+    }
+  
+    .benefits__button--prev {
+      left: 10px;
+    }
+    .benefits__button--next {
+      right: 10px;
+    }
+    
+    #b-2:checked ~ .benefits__slider-container .benefits__slider {
+      transform: translateX(-100%);
+    }
+  
+    #b-3:checked ~ .benefits__slider-container .benefits__slider {
+      transform: translateX(-200%);
+    }
+    
+    #b-1:checked ~ .benefits__slider-container .btn-b1 {
+      display: block;
+    }
+    #b-2:checked ~ .benefits__slider-container .btn-b2 {
+      display: block;
+    }
+    #b-3:checked ~ .benefits__slider-container .btn-b3 {
+      display: block;
+    }
+  
+    /* TESTIMONIALS */
+    .testimonials {
+      max-width: 90%;
+      padding: 10px;
+    }
+  
+    .testimonials__slider {
+      width: 100%;
+    }
+  
+    .testimonials__item {
+      flex: 0 0 100%;
+    }
+  
+    #t-2:checked ~ .testimonials__slider-container .testimonials__slider {
+      transform: translateX(-100%);
+    }
+  
+    #t-3:checked ~ .testimonials__slider-container .testimonials__slider {
+      transform: translateX(-200%);
+    }
+  
+    .testimonials__button {
+      font-size: 1.2rem;
+      top: 45%;
+    }
+  
+    .testimonials__item p {
+      font-size: 20px;
+    }
+    
+    .signup__form {
+      max-width: 90%; /* На маленьких экранах форма растягивается почти на весь экран */
+    }
+    .signup__form input,
+    .signup__form button {
+      padding: 12px; /* Уменьшаем отступы */
+      font-size: 1rem; /* Уменьшаем размер текста */
+      display: flex;
+      flex-direction: column; /* Поля располагаются в столбик */
+    }
+  }
+  
+    .footer {
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+  
+  /* max-width: 480px */
+  @media (max-width: 480px) {
+  
+    .features {
+      display: grid; /* Используем CSS Grid */
+      grid-template-columns: 1fr; /* Все элементы идут в одну колонку */
+      grid-auto-rows: auto; /* Автоматическая высота элементов */
+      gap: 10px; /* Отступы между элементами */
+      padding: 10px; /* Уменьшаем внутренние отступы */
+      width: 100%; /* Контейнер занимает всю ширину экрана */
+      margin: 0 auto; /* Центрируем элементы */
+      box-sizing: border-box; /* Учитываем отступы */
+    }
+  
+    /* Отдельный отзыв */
+    .features__item {
+      color: #FAFAFA; /* замена #fff */
+      padding: 15px; /* Уменьшаем внутренние отступы */
+      border-radius: 8px; /* Скругленные углы */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Легкая тень для блоков */
+      text-align: left; /* Выравнивание текста по левому краю */
+      overflow: hidden; /* Убираем лишнее */
+      word-wrap: break-word; /* Перенос длинных слов */
+    }
+  
+    /* Заголовок отзыва */
+    .features__item h3 {
+      font-size: 1.1rem; /* Чуть меньше размер заголовка */
+      margin-bottom: 5px; /* Убираем лишний отступ */
+      color: #FFD166; /* замена #ffa500 */
+    }
+  
+    /* Текст отзыва */
+    .features__item p {
+      font-size: 0.9rem; /* Уменьшаем размер текста */
+      line-height: 1.4; /* Оптимальное межстрочное расстояние */
+      margin: 0; /* Убираем лишние отступы */
+    }
+  
+    .header__logo img {
+      width: 50px;
+      height: 50px;
+    }
+    .header__tagline {
+      font-size: 1rem;
+    }
+    .header__login-btn {
+      font-size: 0.9rem;
+    }
+    .hero {
+      max-height: 300px;
+      margin-bottom: 10px;
+    }
+    .hero__image {
+      opacity: 0.9;
+    }
+  
+    /* TESTIMONIALS */
+    .testimonials__slider {
+      width: 100%;
+    }
+  
+    .testimonials__item {
+      flex: 0 0 100%;
+    }
+  
+    #t-2:checked ~ .testimonials__slider-container .testimonials__slider {
+      transform: translateX(-100%);
+    }
+  
+    #t-3:checked ~ .testimonials__slider-container .testimonials__slider {
+      transform: translateX(-200%);
+    }
+  
+    .testimonials__button {
+      font-size: 1.2rem;
+      top: 45%;
+    }
+  
+    .signup__form {
+      gap: 8px;
+      display: flex;
+      flex-direction: column; /* Поля располагаются в столбик */
+    }
+    .footer {
+      gap: 8px;
+    }
+  }
