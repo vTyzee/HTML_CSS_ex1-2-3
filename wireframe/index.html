@@ -4,154 +4,244 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Travel Adventures</title>
+  <!-- Подключаем Google Font "Montserrat" -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <!-- Подключаем внешний файл стилей -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<!-- Шапка сайта (Header) -->
+<header class="header">
+  <div class="header__logo">
+    <img src="travel-logo.png" alt="Travel Adventures Logo" />
+    <span class="header__tagline">Travel Adventures</span>
+  </div>
+  <div class="header__actions">
+    <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
+    <label for="theme-toggle" class="theme-toggle-label">Светлая/Тёмная тема</label>
+  </div>
+  <button class="header__login-btn">Личный кабинет</button>
+</header>
 
-  <!-- Шапка сайта (Header) -->
-  <header class="header">
-    <div class="header__logo">
-      <img src="images/travel_logo.png" alt="Travel Logo" />
-      <span class="header__tagline">Explore the World</span>
+<!-- Основной блок (Hero) -->
+<section class="hero">
+  <img src="travel-hero.jpg" alt="Путешествие" class="hero__image" />
+</section>
+
+<!-- Видео -->
+<section class="video">
+  <div class="video__container">
+    <video controls poster="travel-preview.jpg">
+      <source src="travel-video.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
+</section>
+
+<!-- Карусель -->
+<section class="carousel">
+  <h2>Наши направления</h2>
+  <div class="carousel__container">
+    <div class="carousel__slide active">
+      <img src="travel1.jpg" alt="Изображение 1" />
     </div>
-    <button class="header__login-btn">Sign In</button>
-  </header>
-
-  <!-- Основной блок (Hero) -->
-  <section class="hero">
-    <img
-      src="images/travel_hero.jpg"
-      alt="Hero Image"
-      class="hero__image"
-    />
-  </section>
-
-  <!-- Видео или трейлер -->
-  <section class="video">
-    <div class="video__container">
-      <video controls poster="videos/travel_preview.jpg">
-        <source src="travel_trailer.mp4" type="video/mp4">
-        Your browser does not support video playback.
-      </video>
+    <div class="carousel__slide">
+      <img src="travel2.jpg" alt="Изображение 2" />
     </div>
-  </section>
-
-  <section class="benefits">
-    <h2>Why Choose Us?</h2>
-
-    <input type="radio" name="benefit" id="b-1" checked>
-    <input type="radio" name="benefit" id="b-2">
-    <input type="radio" name="benefit" id="b-3">
-
-    <div class="benefits__slider-container">
-      <div class="benefits__slider">
-        <div class="benefits__item">
-          <h3>Diverse Destinations</h3>
-          <p>Explore a variety of destinations, from bustling cities to serene beaches, each offering unique experiences.</p>
-        </div>
-        <div class="benefits__item">
-          <h3>Customized Tours</h3>
-          <p>Tailor your trip to match your preferences with our fully customizable tour packages.</p>
-        </div>
-        <div class="benefits__item">
-          <h3>Easy Booking</h3>
-          <p>Plan your adventure effortlessly with our user-friendly booking system and expert support.</p>
-        </div>
-      </div>
-
-      <label for="b-3" class="benefits__button benefits__button--prev btn-b1">&lt;</label>
-      <label for="b-2" class="benefits__button benefits__button--next btn-b1">&gt;</label>
-
-      <label for="b-1" class="benefits__button benefits__button--prev btn-b2">&lt;</label>
-      <label for="b-3" class="benefits__button benefits__button--next btn-b2">&gt;</label>
-
-      <label for="b-2" class="benefits__button benefits__button--prev btn-b3">&lt;</label>
-      <label for="b-1" class="benefits__button benefits__button--next btn-b3">&gt;</label>
+    <div class="carousel__slide">
+      <img src="travel3.jpg" alt="Изображение 3" />
     </div>
-  </section>
-
-  <!-- Отзывы -->
-  <section class="testimonials">
-    <h2>Traveler Stories</h2>
-
-    <input type="radio" name="testimonial" id="t-1" checked>
-    <input type="radio" name="testimonial" id="t-2">
-    <input type="radio" name="testimonial" id="t-3">
-
-    <div class="testimonials__slider-container">
-      <div class="testimonials__slider">
-        <div class="testimonials__item">
-          <img src="images/traveler1.jpg" alt="Avatar 1" />
-          <p>“An unforgettable journey! Everything was perfect from start to finish.”</p>
-        </div>
-        <div class="testimonials__item">
-          <img src="images/traveler2.jpg" alt="Avatar 2" />
-          <p>“Best vacation ever! The customized tour met all my expectations.”</p>
-        </div>
-        <div class="testimonials__item">
-          <img src="images/traveler3.jpg" alt="Avatar 3" />
-          <p>“Highly recommend! Professional service and amazing destinations.”</p>
-        </div>
-      </div>
-
-      <label for="t-3" class="testimonials__button testimonials__button--prev btn-1">&lt;</label>
-      <label for="t-2" class="testimonials__button testimonials__button--next btn-1">&gt;</label>
-
-      <label for="t-1" class="testimonials__button testimonials__button--prev btn-2">&lt;</label>
-      <label for="t-3" class="testimonials__button testimonials__button--next btn-2">&gt;</label>
-
-      <label for="t-2" class="testimonials__button testimonials__button--prev btn-3">&lt;</label>
-      <label for="t-1" class="testimonials__button testimonials__button--next btn-3">&gt;</label>
+    <div class="carousel__slide">
+      <img src="travel4.jpg" alt="Изображение 4" />
     </div>
-  </section>
+    <div class="carousel__slide">
+      <img src="travel5.jpg" alt="Изображение 5" />
+    </div>
+  </div>
+</section>
 
-  <!-- Особенности -->
-  <section class="features">
-    <h2>Features</h2>
-    <div class="features__items">
-      <div class="features__item">
-        <h3>Top Destinations</h3>
-        <p>Visit world-famous landmarks and hidden gems with our expert guides.</p>
+<!-- Преимущества -->
+<section class="benefits">
+  <h2>Почему мы?</h2>
+
+  <!-- Радиокнопки (по количеству слайдов) -->
+  <input type="radio" name="benefit" id="b-1" checked>
+  <input type="radio" name="benefit" id="b-2">
+  <input type="radio" name="benefit" id="b-3">
+
+  <!-- Внешний контейнер для слайдера и стрелок -->
+  <div class="benefits__slider-container">
+    <div class="benefits__slider">
+      <!-- Слайд 1 -->
+      <div class="benefits__item">
+        <h3>Индивидуальный подход</h3>
+        <p>Мы подбираем маршруты с учётом ваших пожеланий, стиля отдыха и бюджета. Личный менеджер поможет в любой момент.</p>
       </div>
-      <div class="features__item">
-        <h3>Adventure Activities</h3>
-        <p>Experience thrilling activities like hiking, diving, and more.</p>
+      <!-- Слайд 2 -->
+      <div class="benefits__item">
+        <h3>Широкий выбор туров</h3>
+        <p>Экзотические острова, активные горные походы, пляжный релакс — найдётся направление для каждого!</p>
       </div>
-      <div class="features__item">
-        <h3>Luxury Accommodation</h3>
-        <p>Stay at premium hotels and resorts offering unmatched comfort.</p>
+      <!-- Слайд 3 -->
+      <div class="benefits__item">
+        <h3>Поддержка 24/7</h3>
+        <p>Наша служба поддержки всегда на связи: поможем оформить визу, подобрать страховку и решить все организационные вопросы.</p>
       </div>
     </div>
-  </section>
 
-  <!-- Блок подписки -->
-  <section class="signup">
-    <h2>Join Us and Start Your Adventure!</h2>
-    <form class="signup__form">
-      <input type="email" placeholder="Your Email" required />
-      <button type="submit">Sign Up</button>
+    <!-- Кнопки (стрелки) -->
+    <label for="b-3" class="benefits__button benefits__button--prev btn-b1">&lt;</label>
+    <label for="b-2" class="benefits__button benefits__button--next btn-b1">&gt;</label>
+
+    <label for="b-1" class="benefits__button benefits__button--prev btn-b2">&lt;</label>
+    <label for="b-3" class="benefits__button benefits__button--next btn-b2">&gt;</label>
+
+    <label for="b-2" class="benefits__button benefits__button--prev btn-b3">&lt;</label>
+    <label for="b-1" class="benefits__button benefits__button--next btn-b3">&gt;</label>
+  </div>
+</section>
+
+<!-- Карточки -->
+<section class="cards">
+  <h2>Популярные туры</h2>
+  <div class="cards__container">
+    <div class="card">
+      <div class="card__image">
+        <img src="bali.jpg" alt="Тур на Бали" />
+      </div>
+      <h3 class="card__title">Отдых на Бали</h3>
+      <p class="card__description">
+        Окунитесь в мир пляжей, тропических джунглей и невероятной атмосферы.
+      </p>
+    </div>
+    <div class="card">
+      <div class="card__image">
+        <img src="norway.jpg" alt="Тур в Норвегию" />
+      </div>
+      <h3 class="card__title">Горные фьорды Норвегии</h3>
+      <p class="card__description">
+        Природные пейзажи, которые захватывают дух: водопады, озёра, величественные горы.
+      </p>
+    </div>
+    <div class="card">
+      <div class="card__image">
+        <img src="egypt.jpg" alt="Тур в Египет" />
+      </div>
+      <h3 class="card__title">История Древнего Египта</h3>
+      <p class="card__description">
+        Ознакомьтесь с уникальной культурой и насладитесь красотой Красного моря.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Отзывы -->
+<section class="testimonials">
+  <h2>Отзывы</h2>
+
+  <!-- Радиокнопки (по количеству слайдов) -->
+  <input type="radio" name="testimonial" id="t-1" checked>
+  <input type="radio" name="testimonial" id="t-2">
+  <input type="radio" name="testimonial" id="t-3">
+
+  <div class="testimonials__slider-container">
+    <div class="testimonials__slider">
+      <div class="testimonials__item">
+        <img src="avatar1.jpg" alt="Avatar 1" />
+        <p>«Потрясающие впечатления! Тур-оператор помог с визой и всё прошло идеально.»</p>
+      </div>
+      <div class="testimonials__item">
+        <img src="avatar2.jpg" alt="Avatar 2" />
+        <p>«Безупречная организация. Мы летали в горы, и гид был суперпрофессионален!»</p>
+      </div>
+      <div class="testimonials__item">
+        <img src="avatar3.jpg" alt="Avatar 3" />
+        <p>«Лучшие цены на курорты. Вернёмся ещё раз, спасибо за отличный сервис!»</p>
+      </div>
+    </div>
+
+    <!-- Кнопки навигации для CSS-слайдера -->
+    <label for="t-3" class="testimonials__button testimonials__button--prev btn-1">&lt;</label>
+    <label for="t-2" class="testimonials__button testimonials__button--next btn-1">&gt;</label>
+    <label for="t-1" class="testimonials__button testimonials__button--prev btn-2">&lt;</label>
+    <label for="t-3" class="testimonials__button testimonials__button--next btn-2">&gt;</label>
+    <label for="t-2" class="testimonials__button testimonials__button--prev btn-3">&lt;</label>
+    <label for="t-1" class="testimonials__button testimonials__button--next btn-3">&gt;</label>
+  </div>
+</section>
+
+<!-- Дополнительные кнопки (JS, если нужно) -->
+<button class="testimonials__button testimonials__button--prev" id="prevBtn" aria-label="Предыдущий отзыв">&lt;</button>
+<button class="testimonials__button testimonials__button--next" id="nextBtn" aria-label="Следующий отзыв">&gt;</button>
+
+<!-- Особенности -->
+<section class="features">
+  <h2>Наши особенности</h2>
+  <div class="features__items">
+    <div class="features__item">
+      <h3>Уникальные маршруты</h3>
+      <p>Разработанные опытными гидами и географами для незабываемых впечатлений.</p>
+    </div>
+    <div class="features__item">
+      <h3>Современный транспорт</h3>
+      <p>Проверенные авиаперевозчики и автобусы: комфорт и безопасность всегда в приоритете.</p>
+    </div>
+    <div class="features__item">
+      <h3>Гибкая система скидок</h3>
+      <p>Семейные тарифы, акции на раннее бронирование, корпоративные программы.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Блок подписки -->
+<section class="signup">
+  <h2>Оставьте заявку на подбор тура!</h2>
+  <form class="signup__form">
+    <input type="email" placeholder="Ваш Email" required />
+    <button type="button" id="openModalBtn">Отправить заявку</button>
+  </form>
+</section>
+
+<!-- Модальное окно -->
+<div id="modal" class="modal">
+  <div class="modal__content">
+    <h2>Ваши контакты</h2>
+    <form id="modalForm" class="modal__form">
+      <label for="name">Имя:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="phone">Телефон:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required />
+
+      <div class="modal__actions">
+        <button type="submit">Отправить</button>
+        <button type="button" id="closeModal">Закрыть</button>
+      </div>
     </form>
-  </section>
+  </div>
+</div>
 
-  <!-- Подвал -->
-  <footer class="footer">
-    <nav class="footer__menu">
-      <a href="#">Home</a>
-      <a href="#">About Us</a>
-      <a href="#">Contact</a>
-    </nav>
-    <div class="footer__social">
-      <a href="#" target="_blank">
-        <img src="icons\vk-icon.png" alt="VK" class="footer__icon">
-      </a>
-      <a href="#" target="_blank">
-        <img src="icons\instagram-icon.png" alt="Instagram" class="footer__icon">
-      </a>
-      <a href="#" target="_blank">
-        <img src="icons\youtube-icon.png" alt="YouTube" class="footer__icon">
-      </a>
-    </div>
-  </footer>
+<!-- Подвал -->
+<footer class="footer">
+  <nav class="footer__menu">
+    <a href="#">Главная</a>
+    <a href="#">О компании</a>
+    <a href="#">Контакты</a>
+  </nav>
+  <div class="footer__social">
+    <a href="#" target="_blank">
+      <img src="vk-icon.png" alt="VK" class="footer__icon">
+    </a>
+    <a href="#" target="_blank">
+      <img src="instagram-icon.png" alt="Instagram" class="footer__icon">
+    </a>
+    <a href="#" target="_blank">
+      <img src="youtube-icon.png" alt="YouTube" class="footer__icon">
+    </a>
+  </div>
+</footer>
+
+<!-- Подключение JS -->
+<script src="script.js"></script>
 </body>
 </html>

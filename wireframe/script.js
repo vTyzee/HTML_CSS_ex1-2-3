@@ -1,22 +1,69 @@
-// Простейший слайдер для отзывов
-const testimonials = document.querySelectorAll('.testimonial');
-let currentIndex = 0;
+document.addEventListener('DOMContentLoaded', () => {
+  // Модальное окно
+  const modal = document.getElementById('modal');
+  const openModalBtn = document.getElementById('openModalBtn');
+  const closeModalBtn = document.getElementById('closeModal');
 
-// Функция, отображающая отзыв по индексу
-function showTestimonial(index) {
-  testimonials.forEach((testimonial, i) => {
-    testimonial.classList.remove('active');
-    if (i === index) {
-      testimonial.classList.add('active');
+  if (openModalBtn) {
+    openModalBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
+  }
+
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+  }
+
+  window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
     }
   });
-}
 
-// Запускаем первый отзыв
-showTestimonial(currentIndex);
+  // Переключение темы
+  const themeToggleCheckbox = document.getElementById('theme-toggle');
+  if (themeToggleCheckbox) {
+    themeToggleCheckbox.addEventListener('change', function() {
+      document.body.classList.toggle('light-theme');
+    });
+  }
 
-// Каждые 5 секунд переключаемся на следующий
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % testimonials.length;
-  showTestimonial(currentIndex);
-}, 5000);
+  // Карусель (слайды)
+  const slides = document.querySelectorAll('.carousel__slide');
+  let currentSlide = 0;
+  const totalSlides = slides.length;
+  let slideInterval;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (i === index) {
+        slide.classList.add('active');
+      }
+    });
+  }
+
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  }
+
+  function startSlideShow() {
+    slideInterval = setInterval(nextSlide, 5000);
+  }
+
+  function stopSlideShow() {
+    clearInterval(slideInterval);
+  }
+
+  if (slides.length > 0) {
+    showSlide(currentSlide);
+    startSlideShow();
+  }
+
+  const carouselContainer = document.querySelector('.carousel__container');
+  carouselContainer.addEventListener('mouseenter', stopSlideShow);
+  carouselContainer.addEventListener('mouseleave', startSlideShow);
+});
