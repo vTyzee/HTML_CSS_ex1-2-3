@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Travel Adventures | Главная</title>
+
+  <!-- Шрифты: Lobster (для заголовков), Open Sans (для остального текста) -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Подключаем общий файл стилей -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Шапка сайта (Header) -->
+  <header class="header">
+    <div class="header__logo">
+      <img src="travel-logo.png" alt="Travel Adventures Logo" />
+      <span class="header__tagline">Travel Adventures</span>
+    </div>
+
+    <!-- Переключатель темы -->
+    <div class="header__actions">
+      <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox">
+      <label for="theme-toggle" class="theme-toggle-label">Сменить тему</label>
+    </div>
+
+    <!-- Кнопка входа/ЛК -->
+    <button class="header__login-btn">Личный кабинет</button>
+  </header>
+
+  <!-- Главное меню сайта -->
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html" class="active">Главная</a></li>
+      <li><a href="about.html">О компании</a></li>
+      <li><a href="cart.html">Корзина</a></li>
+    </ul>
+  </nav>
+
+  <!-- Основной контент -->
+  <main>
+    <!-- Большой баннер (Hero) -->
+    <section class="hero">
+      <img src="travel-hero.jpg" alt="Путешествие" class="hero__image" />
+    </section>
+
+    <!-- Видео -->
+    <section class="video">
+      <div class="video__container">
+        <video controls poster="preview.jpg">
+          <source src="videoNature.mp4" type="video/mp4">
+          Ваш браузер не поддерживает видео.
+        </video>
+      </div>
+    </section>
+
+    <!-- Карусель (5 картинок) -->
+    <section class="carousel">
+      <h2>Наши направления</h2>
+      <div class="carousel__container">
+        <div class="carousel__slide active">
+          <img src="travel1.jpg" alt="Изображение 1" />
+        </div>
+        <div class="carousel__slide">
+          <img src="travel2.jpg" alt="Изображение 2" />
+        </div>
+        <div class="carousel__slide">
+          <img src="travel3.jpg" alt="Изображение 3" />
+        </div>
+        <div class="carousel__slide">
+          <img src="travel4.jpg" alt="Изображение 4" />
+        </div>
+        <div class="carousel__slide">
+          <img src="travel5.jpg" alt="Изображение 5" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Преимущества (CSS-слайдер) -->
+    <section class="benefits">
+      <h2>Почему мы?</h2>
+
+      <!-- Радиокнопки (по количеству слайдов) -->
+      <input type="radio" name="benefit" id="b-1" checked>
+      <input type="radio" name="benefit" id="b-2">
+      <input type="radio" name="benefit" id="b-3">
+
+      <div class="benefits__slider-container">
+        <div class="benefits__slider">
+          <!-- Слайд 1 -->
+          <article class="benefits__item">
+            <h3>Индивидуальный подход</h3>
+            <p>Подбираем маршруты под ваши пожелания, помогаем на всех этапах планирования.</p>
+          </article>
+          <!-- Слайд 2 -->
+          <article class="benefits__item">
+            <h3>Широкий выбор туров</h3>
+            <p>Экзотические острова, горные походы, пляжный отдых — для каждого найдётся идеальный вариант.</p>
+          </article>
+          <!-- Слайд 3 -->
+          <article class="benefits__item">
+            <h3>Поддержка 24/7</h3>
+            <p>Наша служба поддержки поможет оформить визу, страховку и решить любые вопросы в любое время суток.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Карточки (товары/услуги) c "спиннер"-анимацией -->
+    <section class="cards">
+      <h2>Популярные туры</h2>
+      <div class="cards__container">
+        <!-- Карточка 1 -->
+        <article class="card">
+          <div class="spinner"></div>
+          <div class="card__image">
+            <img src="bali.jpg" alt="Тур на Бали" />
+          </div>
+          <h3 class="card__title">Отдых на Бали</h3>
+          <p class="card__description">
+            Окунитесь в мир пляжей, тропических джунглей и невероятной атмосферы.
+          </p>
+        </article>
+
+        <!-- Карточка 2 -->
+        <article class="card">
+          <div class="spinner"></div>
+          <div class="card__image">
+            <img src="norway.jpg" alt="Тур в Норвегию" />
+          </div>
+          <h3 class="card__title">Горные фьорды Норвегии</h3>
+          <p class="card__description">
+            Природные пейзажи, которые захватывают дух: водопады, озёра, величественные горы.
+          </p>
+        </article>
+
+        <!-- Карточка 3 -->
+        <article class="card">
+          <div class="spinner"></div>
+          <div class="card__image">
+            <img src="egypt.jpg" alt="Тур в Египет" />
+          </div>
+          <h3 class="card__title">История Древнего Египта</h3>
+          <p class="card__description">
+            Ознакомьтесь с уникальной культурой и насладитесь красотой Красного моря.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Отзывы (CSS-слайдер) -->
+    <section class="testimonials">
+      <h2>Отзывы</h2>
+
+      <!-- Радиокнопки (по количеству слайдов) -->
+      <input type="radio" name="testimonial" id="t-1" checked>
+      <input type="radio" name="testimonial" id="t-2">
+      <input type="radio" name="testimonial" id="t-3">
+
+      <div class="testimonials__slider-container">
+        <div class="testimonials__slider">
+          <!-- Слайд 1 -->
+          <article class="testimonials__item">
+            <img src="avatar1.jpg" alt="Avatar 1" />
+            <p>«Потрясающие впечатления! Спасибо за помощь в подборе тура.»</p>
+          </article>
+          <!-- Слайд 2 -->
+          <article class="testimonials__item">
+            <img src="avatar2.jpg" alt="Avatar 2" />
+            <p>«Безупречная организация. Гид был суперпрофессионален, всё прошло гладко!»</p>
+          </article>
+          <!-- Слайд 3 -->
+          <article class="testimonials__item">
+            <img src="avatar3.jpg" alt="Avatar 3" />
+            <p>«Превосходные цены, отличный сервис. Обязательно обратимся ещё раз!»</p>
+          </article>
+        </div>
+
+        <!-- Кнопки-стрелки (CSS) для переключения -->
+        <label for="t-3" class="testimonials__button testimonials__button--prev btn-1">&lt;</label>
+        <label for="t-2" class="testimonials__button testimonials__button--next btn-1">&gt;</label>
+        <label for="t-1" class="testimonials__button testimonials__button--prev btn-2">&lt;</label>
+        <label for="t-3" class="testimonials__button testimonials__button--next btn-2">&gt;</label>
+        <label for="t-2" class="testimonials__button testimonials__button--prev btn-3">&lt;</label>
+        <label for="t-1" class="testimonials__button testimonials__button--next btn-3">&gt;</label>
+      </div>
+
+      <!-- Доп. кнопки (JS) — скрыты через CSS -->
+      <button class="testimonials__button testimonials__button--prev" id="prevBtn" aria-label="Предыдущий отзыв">&lt;</button>
+      <button class="testimonials__button testimonials__button--next" id="nextBtn" aria-label="Следующий отзыв">&gt;</button>
+    </section>
+
+    <!-- Особенности -->
+    <section class="features">
+      <h2>Наши особенности</h2>
+      <div class="features__items">
+        <article class="features__item">
+          <h3>Уникальные маршруты</h3>
+          <p>Разработаны профессиональными гидами и географами для незабываемых впечатлений.</p>
+        </article>
+        <article class="features__item">
+          <h3>Современный транспорт</h3>
+          <p>Только проверенные авиаперевозчики и автобусы. Комфорт и безопасность прежде всего.</p>
+        </article>
+        <article class="features__item">
+          <h3>Гибкая система скидок</h3>
+          <p>Семейные тарифы, спецпредложения на раннее бронирование, корпоративные программы.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Блок подписки (Sign up) -->
+    <section class="signup">
+      <h2>Оставьте заявку на подбор тура!</h2>
+      <form class="signup__form">
+        <input type="email" placeholder="Ваш Email" required />
+        <button type="button" id="openModalBtn">Отправить заявку</button>
+      </form>
+    </section>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+      <div class="modal__content">
+        <h2>Ваши контакты</h2>
+        <form id="modalForm" class="modal__form">
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="phone">Телефон:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required />
+
+          <div class="modal__actions">
+            <button type="submit">Отправить</button>
+            <button type="button" id="closeModal">Закрыть</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Подвал (Footer) -->
+  <footer class="footer">
+    <nav class="footer__menu">
+      <a href="index.html" class="active">Главная</a>
+      <a href="about.html">О компании</a>
+      <a href="cart.html">Корзина</a>
+    </nav>
+    <div class="footer__social">
+      <a href="#" target="_blank">
+        <img src="vk-icon.png" alt="VK" class="footer__icon">
+      </a>
+      <a href="#" target="_blank">
+        <img src="instagram-icon.png" alt="Instagram" class="footer__icon">
+      </a>
+      <a href="#" target="_blank">
+        <img src="youtube-icon.png" alt="YouTube" class="footer__icon">
+      </a>
+    </div>
+  </footer>
+
+  <!-- Подключение JS -->
+  <script src="script.js"></script>
+</body>
+</html>
