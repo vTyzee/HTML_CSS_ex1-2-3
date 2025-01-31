@@ -275,136 +275,166 @@ label.btn-b1, label.btn-b2, label.btn-b3 {
 /* ================================
    CARDS (товары/услуги) + SPINNER
 ================================ */
+/* Стили для контейнера карточек */
 .cards {
-  padding: 40px 20px;
-  background: #f0f8ff;
-  text-align: center;
-}
-.cards h2 {
-  margin-bottom: 30px;
-  font-size: 1.8rem;
-  color: #2c3e50;
-}
-.cards__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-.card {
-  position: relative;
-  background-color: #fff;
-  border-radius: 8px;
-  width: 300px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  overflow: hidden;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  padding: 40px 20px; /* Отступы внутри контейнера */
+  background: #f0f8ff; /* Светло-голубой фон */
+  text-align: center; /* Центрирование текста внутри контейнера */
 }
 
-/* SPINNER внутри карточки */
-.spinner {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 25px;
-  height: 25px;
-  border: 3px solid #f0f0f0;
-  border-top: 3px solid #2980b9;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+/* Заголовок карточек */
+.cards h2 {
+  margin-bottom: 30px; /* Отступ снизу */
+  font-size: 1.8rem; /* Размер шрифта */
+  color: #2c3e50; /* Темно-синий цвет текста */
 }
+
+/* Контейнер для карточек */
+.cards__container {
+  display: flex; /* Гибкое расположение элементов */
+  flex-wrap: wrap; /* Перенос элементов при нехватке места */
+  justify-content: center; /* Выравнивание по центру */
+  gap: 20px; /* Расстояние между карточками */
+}
+
+/* Стили для карточки */
+.card {
+  position: relative; /* Позволяет позиционировать вложенные элементы относительно карточки */
+  background-color: #fff; /* Белый фон */
+  border-radius: 8px; /* Закругленные углы */
+  width: 300px; /* Фиксированная ширина карточки */
+  padding: 20px; /* Внутренние отступы */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Тень карточки */
+  transition: transform 0.3s, box-shadow 0.3s; /* Плавные эффекты наведения */
+  overflow: hidden; /* Обрезка содержимого, выходящего за границы */
+}
+
+/* Эффект наведения на карточку */
+.card:hover {
+  transform: translateY(-5px); /* Приподнимание карточки */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Усиленная тень */
+}
+
+/* Стили для анимированного спиннера внутри карточки */
+.spinner {
+  position: absolute; /* Абсолютное позиционирование внутри карточки */
+  top: 10px; /* Отступ сверху */
+  right: 10px; /* Отступ справа */
+  width: 25px; /* Размер спиннера */
+  height: 25px;
+  border: 3px solid #f0f0f0; /* Серый круг */
+  border-top: 3px solid #2980b9; /* Синий сегмент, создающий эффект вращения */
+  border-radius: 50%; /* Делает спиннер круглым */
+  animation: spin 1s linear infinite; /* Бесконечная анимация вращения */
+}
+
+/* Анимация вращения */
 @keyframes spin {
   0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
+/* Контейнер для изображения карточки */
 .card__image {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 4px;
-  margin-bottom: 15px;
-  position: relative;
+  width: 100%; /* Полная ширина карточки */
+  height: 200px; /* Фиксированная высота */
+  overflow: hidden; /* Обрезка изображения, выходящего за границы */
+  border-radius: 4px; /* Небольшое скругление углов */
+  margin-bottom: 15px; /* Отступ снизу */
+  position: relative; /* Позволяет позиционировать дочерние элементы */
 }
+
+/* Стили для изображения в карточке */
 .card__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  object-fit: cover; /* Обрезка изображения, сохраняя его пропорции */
+  transition: transform 0.5s; /* Плавное увеличение при наведении */
 }
+
+/* Эффект увеличения изображения при наведении */
 .card__image:hover img {
-  transform: scale(1.08);
+  transform: scale(1.08); /* Увеличение изображения на 8% */
 }
+
+/* Заголовок карточки */
 .card__title {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: #2980b9;
+  font-size: 1.3rem; /* Размер шрифта */
+  margin-bottom: 10px; /* Отступ снизу */
+  color: #2980b9; /* Синий цвет */
 }
+
+/* Описание карточки */
 .card__description {
-  font-size: 1rem;
-  color: #666;
+  font-size: 1rem; /* Размер шрифта */
+  color: #666; /* Серый цвет текста */
 }
 
 /* ================================
-   TESTIMONIALS (Отзывы)
+   СЕКЦИЯ ОТЗЫВОВ
 ================================ */
 .testimonials {
-  padding: 20px;
-  text-align: center;
-  background: #ecf0f1;
+  padding: 20px; /* Внутренние отступы */
+  text-align: center; /* Центрирование текста */
+  background: #ecf0f1; /* Светло-серый фон */
 }
+
+/* Заголовок секции отзывов */
 .testimonials h2 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #2c3e50;
+  font-size: 1.8rem; /* Размер шрифта */
+  margin-bottom: 15px; /* Отступ снизу */
+  color: #2c3e50; /* Темно-синий цвет текста */
 }
+
+/* Скрытие радиокнопок (используются для управления слайдером) */
 .testimonials input[type="radio"] {
   display: none;
 }
+
+/* Контейнер для слайдера отзывов */
 .testimonials__slider-container {
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Скрытие выходящих за границы элементов */
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 1000px; /* Максимальная ширина контейнера */
+  margin: 0 auto; /* Центрирование */
+  border: 2px solid #ddd; /* Граница контейнера */
+  border-radius: 8px; /* Скругление углов */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Тень контейнера */
 }
+
+/* Контейнер для всех отзывов */
 .testimonials__slider {
   display: flex;
-  width: 300%;
-  transition: transform 0.4s ease;
+  width: 300%; /* Ширина в 3 раза больше контейнера (для трех слайдов) */
+  transition: transform 0.4s ease; /* Плавное переключение слайдов */
 }
+
+/* Стили для каждого отзыва */
 .testimonials__item {
-  flex: 0 0 100%;
-  background-color: #fff;
-  color: #333;
+  flex: 0 0 100%; /* Каждый отзыв занимает всю ширину контейнера */
+  background-color: #fff; /* Белый фон */
+  color: #333; /* Цвет текста */
   border-radius: 8px;
   padding: 30px;
   box-sizing: border-box;
   text-align: left;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 15px; /* Расстояние между изображением и текстом */
 }
+
+/* Аватар пользователя в отзыве */
 .testimonials__item img {
-  border-radius: 50%;
+  border-radius: 50%; /* Круглая форма */
   width: 80px;
   height: 80px;
   border: 2px solid #555;
   margin-left: 20px;
   flex-shrink: 0;
 }
-.testimonials__item p {
-  font-size: 1rem;
-  line-height: 1.4;
-}
+
+/* Навигационные кнопки слайдера */
 .testimonials__button {
   position: absolute;
   top: 50%;
@@ -415,11 +445,12 @@ label.btn-b1, label.btn-b2, label.btn-b3 {
   padding: 8px 12px;
   border-radius: 50%;
   border: none;
-  display: none; /* По умолчанию скрыты */
+  display: none;
   z-index: 10;
   color: #fff;
   transition: background-color 0.3s;
 }
+
 .testimonials__button:hover {
   background-color: #1f6e94;
 }
@@ -984,4 +1015,137 @@ theme .cards {
 }
 .dark-theme .cart__actions button:hover {
   background-color: #555; 
+}
+.signup {
+  background-color: #ecf0f1;
+  padding: 40px 20px;
+  /* Заголовок, если нужно, по центру */
+  text-align: center;
+}
+
+.signup h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+/* Вся форма — 100% */
+.signup__form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Инпут слева, кнопка справа */
+  width: 100%;        /* или max-width, если хотите ограничить */
+  margin: 0 auto;
+}
+
+/* Инпут занимает ~40%, 
+   чтобы он «шёл» от левого края к середине */
+.signup__form input[type="email"] {
+  width: 40%;
+  padding: 15px;
+  font-size: 1.2rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.signup__form input[type="email"]:focus {
+  border-color: #2980b9;
+}
+
+/* Кнопка ~20% (или 25%), 
+   чтобы она «шла» от правого края к середине */
+.signup__form button {
+  width: 20%;
+  min-width: 120px; /* чтобы на узком экране не слишком сжималась */
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #27ae60;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.signup__form button:hover {
+  background-color: #229e55;
+}
+
+.video__container {
+  position: relative;
+  width: 100%;        /* на всю ширину страницы */
+  height: 70vh;       /* 70% высоты экрана */
+  overflow: hidden;   
+  border-radius: 8px; /* можно оставить скругление */
+  max-width: none;    /* убираем ограничение в 800px */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Видео заполняет контейнер */
+.video__container video {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* сохраняет «обрезку» без искажений */
+}
+.cart__image {
+  width: 100px;        /* ширина */
+  height: 70px;        /* высота */
+  object-fit: cover;   /* заполнение */
+  border-radius: 4px;
+}
+.signup {
+  background-color: #ecf0f1; /* Фон для наглядности */
+  padding: 40px 20px;       /* Отступы */
+  text-align: center;       /* Заголовок и общий текст по центру */
+}
+
+/* Крупный заголовок */
+.signup h2 {
+  font-size: 2.2rem; /* Увеличиваем размер шрифта */
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Форма в одной строке (на больших экранах) */
+.signup__form {
+  display: flex;
+  justify-content: center;   /* Выравниваем блоки по горизонтали */
+  align-items: center;
+  gap: 20px;                 /* Промежуток между полем и кнопкой */
+  max-width: 900px;          /* Общая ширина формы */
+  margin: 0 auto;            /* Центрируем форму */
+}
+
+/* Инпут занимает ~50%, кнопка ~20–30% */
+.signup__form input[type="email"] {
+  width: 250%;               /* поле примерно до “середины” */
+  padding: 15px;
+  font-size: 1.2rem;        /* чуть крупнее текст */
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.signup__form input[type="email"]:focus {
+  border-color: #2980b9;
+}
+
+.signup__form button {
+  width: 250%;               /* кнопка занимает примерно 1/4 */
+  min-width: 120px;         /* чтобы на узком экране не сжималась слишком */
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #27ae60; /* зелёный цвет */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup__form button:hover {
+  background-color: #229e55;
 }

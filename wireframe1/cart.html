@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Travel Adventures | Корзина</title>
 
-  <!-- Те же шрифты и CSS -->
+  <!-- Подключаем шрифты и основной CSS -->
   <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -33,10 +33,12 @@
   <main>
     <section class="cart">
       <h1>Ваша корзина</h1>
-      <!-- Пример структуры корзины: таблица с заказанными турами -->
+
+      <!-- Таблица корзины с изображениями -->
       <table class="cart__table">
         <thead>
           <tr>
+            <th>Фото</th>
             <th>Тур</th>
             <th>Цена</th>
             <th>Кол-во</th>
@@ -45,22 +47,31 @@
         </thead>
         <tbody>
           <tr>
+            <td>
+              <!-- Небольшое изображение тура, например, Бали -->
+              <img src="bali.jpg" alt="Отдых на Бали" class="cart__image" />
+            </td>
             <td>Отдых на Бали</td>
-            <td>50 000 руб.</td>
+            <td>50 000 eur.</td>
             <td>1</td>
-            <td>50 000 руб.</td>
+            <td>50 000 eur.</td>
           </tr>
           <tr>
+            <td>
+              <!-- Изображение Норвегии -->
+              <img src="norway.jpg" alt="Фьорды Норвегии" class="cart__image" />
+            </td>
             <td>Горные фьорды Норвегии</td>
-            <td>80 000 руб.</td>
+            <td>80 000 eur.</td>
             <td>1</td>
-            <td>80 000 руб.</td>
+            <td>80 000 eur.</td>
           </tr>
         </tbody>
         <tfoot>
           <tr>
-            <td colspan="3" style="text-align:right;">Всего:</td>
-            <td>130 000 руб.</td>
+            <!-- colspan="4", так как теперь 5 столбцов -->
+            <td colspan="4" style="text-align: right;">Всего:</td>
+            <td>130 000 eur.</td>
           </tr>
         </tfoot>
       </table>
